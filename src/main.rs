@@ -13,9 +13,9 @@ fn main() {
         Ok(file) => file,
     };
 
-    let mut s = String::new();
-    match file.read_to_string(&mut s) {
+    let mut message = String::new();
+    match file.read_to_string(&mut message) {
         Err(why) => panic!("couldn't read file {}: {}", display, why),
-        Ok(_) => println!("{} contains: \n {}", display, s),
+        Ok(_) => println!("{} contains: \n {}", display, message),
     };
 }
